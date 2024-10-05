@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flicker</title>
+
+    <style>
+        h1 {
+            font-size: 55px;
+        }
+
+        button {
+            font-size: 20px;
+            margin-right: 5px;
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 15px;
+        }
+
+        #green {
+            background-color: lightgreen;
+        }
+        
+        #green:hover {
+            background-color: rgb(156, 255, 185);
+        }
+
+        #yellow {
+            background-color: rgb(218, 238, 144);
+        }
+        
+        #yellow:hover {
+            background-color: rgb(253, 255, 156);
+        }
+
+        #blue {
+            background-color: rgb(144, 166, 238);
+        }
+        
+        #blue:hover {
+            background-color: rgb(156, 207, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Flicker</h1>
+
+    <button id="green">Green</button>
+    <button id="yellow">Yellow</button>
+    <button id="blue">Blue</button>
+    <button id="random">Random</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
