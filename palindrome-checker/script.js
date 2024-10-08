@@ -1,4 +1,22 @@
+
+function reverseWord(str) {
+    return str.split("").reverse().join("")
+}
+
 function checkPalindrome() {
+    let word = document.querySelector('input#word')
+    let value = word.value
+    let reverse = reverseWord(value)
+
+    if (reverse.toLowerCase() === value.toLowerCase()) {
+        alert(`The word ${value} is a palindrome!`)
+    } else {
+        alert(`The word ${value} is NOT a palindrome!`)
+    }
+}
+
+// manual way
+/* function checkPalindrome() {
     let word = document.getElementById('word').value
 
     let wordLength = word.length
@@ -35,4 +53,4 @@ function checkPalindrome() {
             alert(`The word ${word} is not a palindrome.`)
         }
     }
-}
+} */
