@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper and Scissors</h1>
-    <p>
-        Choose:
-        <button onclick="computeChoice(0)">ROCK</button>
-        <button onclick="computeChoice(1)">PAPER</button>
-        <button onclick="computeChoice(2)">SCISSORS</button>
-    </p>
-    <strong>
-        <p>Your choice: <span id="user-choice">waiting...</span></p>
-        <p>Computer choice: <span id="cpu-choice">waiting...</span></p>
-        <p>Result: <span id="result">waiting...</span></p>
-    </strong>
+    <div id="main-container">
+        <h1>Rock Paper and Scissors</h1>
+        <p>
+            Pick one
+        </p>
+
+        <button onclick="computeChoice(0)" id="rock">ROCK</button>
+        <button onclick="computeChoice(1)" id="paper">PAPER</button>
+        <button onclick="computeChoice(2)" id="scissors">SCISSORS</button>
+
+        <strong>
+            <p>Player picked: <span id="user-choice">waiting...</span></p>
+            <p>Computer picked: <span id="cpu-choice">waiting...</span></p>
+            <p>Result: <span id="result">waiting...</span></p>
+        </strong>
+    </div>
 
     <script src="app.js"></script>
 </body>
