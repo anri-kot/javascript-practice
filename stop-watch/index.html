@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stop Watch</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h1>Stop Watch</h1>
+    <div id="main-container">
+        <div id="content">
+            <h1>Stop Watch</h1>
 
-        <p id="time-placeholder">
-            00:00
-        </p>
+            <p id="time-placeholder">
+                00:00
+            </p>
 
-        <button onclick="startTimer()">Start</button>
-        <button onclick="stopTimer()">Stop</button>
-        <button onclick="resetTimer()">Reset</button>
+            <p>
+                <button onclick="startTimer()">Start</button>
+                <button onclick="stopTimer()">Stop</button>
+                <button onclick="resetTimer()">Reset</button>
+            </p>
+                <hr>
+            <p>
+                Set custom timer (min:sec): 
+                <input type="number" name="minutes" id="minutes" value="0" max="60" size="2">:
+                <input type="number" name="seconds" id="seconds" value="0" max="60" size="2">
+                <button onclick="customTimer()">Set</button>
+            </p>
+        </div>
     </div>
 
     <script src="script.js"></script>

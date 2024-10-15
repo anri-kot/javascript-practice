@@ -1,20 +1,29 @@
 const timePlaceholder = document.getElementById('time-placeholder')
-let currentTime = 0
+const minutesInput = document.getElementById('minutes')
+const secondsInput = document.getElementById('seconds')
+let secondsElapsed = 0
 let interval = null
 
 function formatTimer(value) {
     return String(value).padStart(2, '0')
 }
 
-function updateTime() {
-    const minutes = Math.floor(currentTime / 60)
-    const seconds = currentTime % 60
-    timePlaceholder.innerHTML = `${formatTimer(minutes)}:${formatTimer(seconds)}`
+function timer() {
+    secondsElapsed++
+    updateTime()
 }
 
-function timer() {
-    currentTime++
-    updateTime()
+function updateTime() {
+    const minutes = Math.floor(secondsElapsed / 60)
+    if (minutes > 59) {
+        resetTimer()
+    } else {
+        const seconds = secondsElapsed % 60
+        if (seconds == 59 && minutes == 59) {
+            stopTimer()
+        }
+        timePlaceholder.innerHTML = `${formatTimer(minutes)}:${formatTimer(seconds)}`
+    }
 }
 
 function startTimer() {
@@ -28,7 +37,23 @@ function stopTimer() {
 
 function resetTimer() {
     stopTimer()
-    currentTime = 0
-    startTimer()
+    secondsElapsed = 0
     updateTime()
+}
+
+function customTimer() {
+    if (minutesInput.value.length == 0 || secondsInput.value.length == 0) {
+        alert('Invalid value in at least one of the fields')
+    } else {
+        let customMinutes = Number(minutesInput.value)
+        if (customMinutes > 60) {
+            customMinutes = 60
+        }
+        let customSeconds = Number(secondsInput.value)
+        if (customSeconds > 60) {
+            customSeconds = 60
+        }
+        secondsElapsed = customMinutes * 60 + customSeconds
+        updateTime()
+    }
 }
