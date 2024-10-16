@@ -1,7 +1,7 @@
 const timePlaceholder = document.getElementById('time-placeholder')
 const minutesInput = document.getElementById('minutes')
 const secondsInput = document.getElementById('seconds')
-let secondsElapsed = 0
+let secondsElapsed = 86395
 let interval = null
 
 function formatTimer(value) {
@@ -9,21 +9,19 @@ function formatTimer(value) {
 }
 
 function timer() {
+    if (secondsElapsed === 86400) {
+        secondsElapsed = 0
+    }
     secondsElapsed++
     updateTime()
 }
 
 function updateTime() {
-    const minutes = Math.floor(secondsElapsed / 60)
-    if (minutes > 59) {
-        resetTimer()
-    } else {
-        const seconds = secondsElapsed % 60
-        if (seconds == 59 && minutes == 59) {
-            stopTimer()
-        }
-        timePlaceholder.innerHTML = `${formatTimer(minutes)}:${formatTimer(seconds)}`
-    }
+    const minutes = Math.floor(secondsElapsed / 60) % 60
+    const seconds = secondsElapsed % 60
+    const hours = Math.floor(secondsElapsed / 3600) % 24
+
+    timePlaceholder.innerHTML = `${formatTimer(hours)}:${formatTimer(minutes)}:${formatTimer(seconds)}`
 }
 
 function startTimer() {
