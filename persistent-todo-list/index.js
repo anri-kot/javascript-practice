@@ -7,7 +7,6 @@ function renderItems() {
     itemsPlaceholder.innerHTML = ''
     for (const [idx, item] of Object.entries(itemsList)) {
         const text = document.createElement('p')
-        text.style.display = 'inline'
         text.textContent = item
 
         const button = document.createElement('button')
@@ -17,6 +16,7 @@ function renderItems() {
 
         const container = document.createElement('div')
         container.style.marginBottom = '10px'
+        container.setAttribute('class', 'item')
         container.appendChild(text)
         container.appendChild(button)
 

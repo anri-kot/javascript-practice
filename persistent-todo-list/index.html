@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>TODO List</h1>
+    <div id="main-container">
+        <h1>TODO List</h1>
 
-    <input type="text" name="textField" id="textField" size="70" placeholder="Type your task here">
-    <button onclick="addItem()">Add</button>
-    
-    <h3>Items</h3>
-    <div id="itemsPlaceholder"></div>
+        <div id="input-area">
+            <input type="text" name="textField" id="textField" placeholder="Type your task here">
+            <button id="addButton" onclick="addItem()">Add</button>
+        </div>
+        
+        <h3>Items</h3>
+        <div id="itemsPlaceholder"></div>
+    </div>
 
     <script src="index.js"></script>
 </body>

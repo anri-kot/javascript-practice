@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFE3E3;
+}
+
+#main-container {
+    margin: 20px;
+    width: 50vw;
+    padding: 20px;
+    background-color: #FEF9F2;
+    border: 5px solid #C9E9D2;
+    border-radius: 20px;
+}
+
+#main-container h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#main-container h3 {
+    text-align: center;
+    margin: 10px;
+}
+
+#main-container input {
+    height: 3em;
+    width: 100%;
+    border: 2px solid #789DBC;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+#input-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+#addButton, .item button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FEF9F2;
+    height: 3em;
+    width: 5vw;
+    margin-left: 10px;
+    background-color: #789DBC;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#addButton {
+
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item p {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 3em;
+    overflow: auto;
+    background-color: white;
+    border: 2px solid #C9E9D2;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.item button {
+    width: 20%;
+    background-color: #FF8A8A;
+}
