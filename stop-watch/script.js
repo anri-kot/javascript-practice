@@ -1,7 +1,7 @@
 const timePlaceholder = document.getElementById('time-placeholder')
 const minutesInput = document.getElementById('minutes')
 const secondsInput = document.getElementById('seconds')
-let secondsElapsed = 86395
+let secondsElapsed = 0
 let interval = null
 
 function formatTimer(value) {
