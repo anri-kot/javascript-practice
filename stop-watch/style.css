@@ -18,9 +18,9 @@ body {
     align-items: center;
     text-align: center;
     background-color: white;
-    width: 30vw;
-    height: 40vh;
+    width: 700px;
     margin: auto;
+    padding: 30px;
 }
 
 #content {

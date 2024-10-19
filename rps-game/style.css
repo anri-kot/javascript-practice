@@ -13,8 +13,7 @@ body {
     border: 0.1em solid rgb(186, 163, 186);
     text-align: center;
     padding: 10px;
-    width: 40%;
-    height: 40%;
+    width: 700px;
 }
 
 #main-container h1 {

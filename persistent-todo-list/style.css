@@ -12,7 +12,7 @@ body {
 
 #main-container {
     margin: 20px;
-    width: 50vw;
+    min-width: 700px;
     padding: 20px;
     background-color: #FEF9F2;
     border: 5px solid #C9E9D2;
@@ -46,12 +46,15 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #FEF9F2;
     height: 3em;
-    width: 5vw;
     margin-left: 10px;
-    background-color: #789DBC;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+#addButton {
+    width: 10%;
+    background-color: #789DBC;
 }
 
 .item {
