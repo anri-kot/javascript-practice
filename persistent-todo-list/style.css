@@ -54,10 +54,6 @@ body {
     cursor: pointer;
 }
 
-#addButton {
-
-}
-
 .item {
     display: flex;
     justify-content: space-between;
